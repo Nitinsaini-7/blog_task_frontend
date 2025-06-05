@@ -92,9 +92,9 @@ const Navbar = () => {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="text-gray-700 hover:text-indigo-600">
-                                        <a href={item.path} className="block">
+                                        <Link to={item.path} className="block">
                                             {item.title}
-                                        </a>
+                                        </Link>
                                     </li>
                                 )
                             })
