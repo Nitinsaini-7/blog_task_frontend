@@ -112,7 +112,7 @@ const Navbar = () => {
 
                 <button
                   onClick={ ()=>{
-                      handleLogout
+                      handleLogout()
                         setState(false)
                   } 
                 }
