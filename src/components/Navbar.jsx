@@ -111,7 +111,11 @@ const Navbar = () => {
                 </button>
 
                 <button
-                  onClick={handleLogout}
+                  onClick={ ()=>{
+                      handleLogout
+                        setState(false)
+                  } 
+                }
                   className="bg-red-500 hover:bg-red-400 text-white px-4 py-2 w-full md:w-auto rounded transition-colors"
                 >
                   Logout
@@ -122,12 +126,12 @@ const Navbar = () => {
 
                         <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
                             <li>
-                                <Link to={'/login'} className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none">
+                                <Link onClick={()=>setState(false)} to={'/login'} className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none">
                                     Log in
                                 </Link>
                             </li>
                             <li>
-                                <Link to={'/register'} className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline">
+                                <Link onClick={()=>setState(false)} to={'/register'} className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline">
                                     Sign in
                                 </Link>
                             </li>
